@@ -8,9 +8,9 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="title">Registro de Personas</h1>
+        <h1>📝 Registro de Personas</h1>
         
-        <div class="card form-card">
+        <div class="card">
             <form action="/add" method="POST">
                 <div class="form-group">
                     <label for="dni">DNI:</label>
@@ -28,23 +28,21 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="direccion">Dirección (opcional):</label>
+                    <label for="direccion">Dirección (Opcional):</label>
                     <input type="text" id="direccion" name="direccion" class="form-control">
                 </div>
                 
                 <div class="form-group">
-                    <label for="telefono">Teléfono (opcional):</label>
+                    <label for="telefono">Teléfono (Opcional):</label>
                     <input type="text" id="telefono" name="telefono" class="form-control">
                 </div>
                 
-                <div class="button-container">
-                    <button type="submit" class="btn btn-primary">💾 Guardar Registro</button>
-                </div>
+                <button type="submit" class="btn btn-primary">💾 Guardar Registro</button>
             </form>
         </div>
 
-        <div class="text-center" style="margin-top: 25px;">
-            <a href="/administrar" class="btn btn-secondary">📋 Ver Registros</a>
+        <div class="text-center" style="margin-top: 20px;">
+            <a href="/administrar" class="btn btn-primary">👀 Ver Registros</a>
         </div>
     </div>
 </body>

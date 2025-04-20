@@ -16,10 +16,10 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Variables de entorno 
 ENV FLASK_APP=app.py
 ENV FLASK_ENV=production
-ENV DATABASE_URL="postgresql://wcruz:QdRmLDrQb78oXKKByl8k484k2aXdBs59@dpg-cvmpjc3e5dus739m9hk0-a/test_oz3h"
+ENV DATABASE_URL="postgresql://darkness:03tppNTXMmrzFDFriBfPGpaQ99VDrTYr@dpg-cvmpkk6mcj7s73bqum8g-a.oregon-postgres.render.com/test_ww0l"  
 
 
 EXPOSE 8080
 
 # Comando de inicio
-CMD ["app.run(host='0.0.0.0', port=5000"]
+CMD ["gunicorn", "--bind", "0.0.0.0:10000", "app:app"]

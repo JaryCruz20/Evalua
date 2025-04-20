@@ -8,10 +8,10 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="title">Administración de Registros</h1>
+        <h1>👥 Administración de Registros</h1>
         
         <div class="card">
-            <div class="table-container">
+            <div class="table-responsive">
                 <table>
                     <thead>
                         <tr>
@@ -35,7 +35,7 @@
                             <td>{{ persona.telefono or '-' }}</td>
                             <td>
                                 <form action="/delete/{{ persona.id }}" method="POST" style="display: inline;">
-                                    <button type="submit" class="btn-delete">🗑️ Eliminar</button>
+                                    <button type="submit" class="btn btn-danger">🗑️ Eliminar</button>
                                 </form>
                             </td>
                         </tr>
@@ -45,8 +45,8 @@
             </div>
         </div>
 
-        <div class="btn-container">
-            <a href="/" class="btn-back">← Volver al Formulario</a>
+        <div class="text-center">
+            <a href="/" class="btn btn-primary">← Volver al Formulario</a>
         </div>
     </div>
 </body>
