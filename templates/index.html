@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Personas</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Registro de Personas</h1>
+        
+        <div class="card form-card">
+            <form action="/add" method="POST">
+                <div class="form-group">
+                    <label for="dni">DNI:</label>
+                    <input type="text" id="dni" name="dni" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" class="form-control" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="direccion">Dirección (opcional):</label>
+                    <input type="text" id="direccion" name="direccion" class="form-control">
+                </div>
+                
+                <div class="form-group">
+                    <label for="telefono">Teléfono (opcional):</label>
+                    <input type="text" id="telefono" name="telefono" class="form-control">
+                </div>
+                
+                <div class="button-container">
+                    <button type="submit" class="btn btn-primary">💾 Guardar Registro</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="text-center" style="margin-top: 25px;">
+            <a href="/administrar" class="btn btn-secondary">📋 Ver Registros</a>
+        </div>
+    </div>
+</body>
+</html>

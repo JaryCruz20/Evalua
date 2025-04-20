@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrar Personas</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Administración de Registros</h1>
+        
+        <div class="card">
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>DNI</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Dirección</th>
+                            <th>Teléfono</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for persona in personas %}
+                        <tr>
+                            <td>{{ persona.id }}</td>
+                            <td>{{ persona.dni }}</td>
+                            <td>{{ persona.nombre }}</td>
+                            <td>{{ persona.apellido }}</td>
+                            <td>{{ persona.direccion or '-' }}</td>
+                            <td>{{ persona.telefono or '-' }}</td>
+                            <td>
+                                <form action="/delete/{{ persona.id }}" method="POST" style="display: inline;">
+                                    <button type="submit" class="btn-delete">🗑️ Eliminar</button>
+                                </form>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="btn-container">
+            <a href="/" class="btn-back">← Volver al Formulario</a>
+        </div>
+    </div>
+</body>
+</html>
